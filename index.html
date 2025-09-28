@@ -25,26 +25,33 @@
       </div>
     </div>
 
-    <!-- HERO: image with overlayed text (name, role, two lines) -->
-    <section class="hero-frame">
+    <!-- PAGE HEADER -->
+    <header class="header">
       <div class="container">
-        <div class="hero-box">
-          <!-- Your photo: keep it square-ish; contain = no cropping -->
-          <img class="hero-img" src="assets/profile.jpg" alt="Sarfraz Ahmad" />
-          <!-- Overlay text in front of the image -->
-          <div class="hero-overlay">
-            <h1 class="hero-name">Sarfraz Ahmad</h1>
-            <p class="hero-role">MS Student at MBZUAI</p>
-            <p class="hero-lines">
-              Researching LLM reasoning, evaluation, and multilingual NLP.<br />
-              Building practical systems that bridge research and production.
-            </p>
-          </div>
+        <h1 class="title">Overview</h1>
+        <p class="subtitle">NLP Researcher & Data Scientist</p>
+      </div>
+    </header>
+
+    <!-- HERO ROW: square image (left) + text (right) -->
+    <section class="hero container">
+      <div class="hero-row">
+        <div class="hero-photo-wrap">
+          <!-- Keep the whole image visible; use your own path if different -->
+          <img class="hero-photo" src="assets/profile.jpg" alt="Sarfraz Ahmad" />
+        </div>
+        <div class="hero-copy">
+          <h1 class="hero-name">Sarfraz Ahmad</h1>
+          <p class="hero-role">MS Student at MBZUAI</p>
+          <p class="hero-lines">
+            Researching LLM reasoning, evaluation, and multilingual NLP.<br />
+            Building practical systems that bridge research and production.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- STACKED BLOCKS -->
+    <!-- STACKED SECTIONS -->
     <main class="container section stack">
       <section class="card">
         <h3>About</h3>
@@ -62,8 +69,8 @@
         <h3>Highlights</h3>
         <ul class="list">
           <li>
-            EMNLP 2025 Demo: <strong>UrduFactCheck</strong> (Agentic
-            fact-checking with evidence boosting).
+            EMNLP 2025 Demo: <strong>UrduFactCheck</strong>
+            (Agentic fact-checking with evidence boosting).
           </li>
           <li>
             Organizer & Contributor:
