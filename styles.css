@@ -106,3 +106,22 @@ kbd{border:1px solid #2a3a78; border-bottom-width:2px; padding:0 6px; border-rad
 @media (min-width: 1000px){
   .grid.cols-3{ grid-template-columns: repeat(3, 1fr); }
 }
+
+/* Keep the three cards in one horizontal row on desktop */
+.horizontal-cards { align-items: start; }
+@media (min-width: 1000px){
+  .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* About card – image block */
+.about-card { display: flex; flex-direction: column; }
+.about-media { margin: 2px 0 12px; display: flex; justify-content: center; }
+.profile-photo{
+  width: clamp(160px, 28vw, 260px);
+  height: clamp(160px, 28vw, 260px);
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid rgba(255,255,255,.08);
+  box-shadow: 0 14px 36px rgba(0,0,0,.45);
+  background: #0f1834;
+}
