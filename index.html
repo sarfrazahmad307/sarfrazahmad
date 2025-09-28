@@ -25,71 +25,73 @@
       </div>
     </div>
 
-    <!-- PAGE HEADER -->
-    <header class="header">
+    <!-- HERO: image with overlayed text (name, role, two lines) -->
+    <section class="hero-frame">
       <div class="container">
-        <h1 class="title">Overview</h1>
-        <p class="subtitle">NLP Researcher & Data Scientist</p>
-      </div>
-    </header>
-
-    <!-- THREE HORIZONTAL CARDS -->
-    <main class="container section">
-      <div class="grid cols-3 horizontal-cards">
-        <!-- ABOUT (with photo) -->
-        <div class="card about-card">
-          <figure class="about-media">
-            <!-- Put your photo at assets/profile.jpg -->
-            <img class="profile-photo" src="assets/profile.jpg" alt="Sarfraz Ahmad" />
-          </figure>
-          <h3>About</h3>
-          <p>
-            I'm Sarfraz Ahmad, an NLP researcher and data scientist focused on
-            LLM reasoning (factual, temporal, spatial) and production-grade ML systems.
-          </p>
-          <p class="meta">
-            Based in UAE. Email:
-            <a href="mailto:sarfraz.ahmad@mbzuai.ac.ae">sarfraz.ahmad@mbzuai.ac.ae</a>
-          </p>
-        </div>
-
-        <!-- HIGHLIGHTS -->
-        <div class="card">
-          <h3>Highlights</h3>
-          <ul class="list">
-            <li>
-              EMNLP 2025 Demo: <strong>UrduFactCheck</strong> (Agentic
-              fact-checking with evidence boosting).
-            </li>
-            <li>
-              Organizer & Contributor:
-              <strong>ImageCLEF 2025 Multimodal Reasoning</strong>.
-            </li>
-            <li>MS in NLP @ MBZUAI (GPA 3.83/4.00).</li>
-            <li>Lead Data Scientist @ Prognos Health (via GoPython LLC).</li>
-          </ul>
-        </div>
-
-        <!-- QUICK LINKS -->
-        <div class="card">
-          <h3>Quick Links</h3>
-          <p class="meta">
-            GitHub:
-            <a href="https://github.com/SarfrazAhmad307">@SarfrazAhmad307</a><br />
-            Email:
-            <a href="mailto:sarfraz.ahmad@mbzuai.ac.ae">sarfraz.ahmad@mbzuai.ac.ae</a><br />
-            Phone: +971-50-3074959
-          </p>
-          <p class="meta">
-            Explore:
-            <a href="experience.html">Experience</a> ·
-            <a href="projects.html">Projects</a> ·
-            <a href="publications.html">Publications</a> ·
-            <a href="education.html">Education</a> ·
-            <a href="skills.html">Skills</a>
-          </p>
+        <div class="hero-box">
+          <!-- Your photo: keep it square-ish; contain = no cropping -->
+          <img class="hero-img" src="assets/profile.jpg" alt="Sarfraz Ahmad" />
+          <!-- Overlay text in front of the image -->
+          <div class="hero-overlay">
+            <h1 class="hero-name">Sarfraz Ahmad</h1>
+            <p class="hero-role">MS Student at MBZUAI</p>
+            <p class="hero-lines">
+              Researching LLM reasoning, evaluation, and multilingual NLP.<br />
+              Building practical systems that bridge research and production.
+            </p>
+          </div>
         </div>
       </div>
+    </section>
+
+    <!-- STACKED BLOCKS -->
+    <main class="container section stack">
+      <section class="card">
+        <h3>About</h3>
+        <p>
+          I'm Sarfraz Ahmad, an NLP researcher and data scientist focused on
+          LLM reasoning (factual, temporal, spatial) and production-grade ML systems.
+        </p>
+        <p class="meta">
+          Based in UAE. Email:
+          <a href="mailto:sarfraz.ahmad@mbzuai.ac.ae">sarfraz.ahmad@mbzuai.ac.ae</a>
+        </p>
+      </section>
+
+      <section class="card">
+        <h3>Highlights</h3>
+        <ul class="list">
+          <li>
+            EMNLP 2025 Demo: <strong>UrduFactCheck</strong> (Agentic
+            fact-checking with evidence boosting).
+          </li>
+          <li>
+            Organizer & Contributor:
+            <strong>ImageCLEF 2025 Multimodal Reasoning</strong>.
+          </li>
+          <li>MS in NLP @ MBZUAI (GPA 3.83/4.00).</li>
+          <li>Lead Data Scientist @ Prognos Health (via GoPython LLC).</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>Quick Links</h3>
+        <p class="meta">
+          GitHub:
+          <a href="https://github.com/SarfrazAhmad307">@SarfrazAhmad307</a><br />
+          Email:
+          <a href="mailto:sarfraz.ahmad@mbzuai.ac.ae">sarfraz.ahmad@mbzuai.ac.ae</a><br />
+          Phone: +971-50-3074959
+        </p>
+        <p class="meta">
+          Explore:
+          <a href="experience.html">Experience</a> ·
+          <a href="projects.html">Projects</a> ·
+          <a href="publications.html">Publications</a> ·
+          <a href="education.html">Education</a> ·
+          <a href="skills.html">Skills</a>
+        </p>
+      </section>
     </main>
 
     <!-- FOOTER -->

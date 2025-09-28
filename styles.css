@@ -125,3 +125,49 @@ kbd{border:1px solid #2a3a78; border-bottom-width:2px; padding:0 6px; border-rad
   box-shadow: 0 14px 36px rgba(0,0,0,.45);
   background: #0f1834;
 }
+
+/* ===== HERO with square image & overlay text ===== */
+.hero-frame { padding: 32px 0 12px; }
+.hero-box{
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #223068;
+  box-shadow: var(--shadow);
+  background:
+    radial-gradient(1200px 700px at -10% -40%, rgba(122,162,255,.18), transparent 60%),
+    radial-gradient(1200px 700px at 120% -60%, rgba(141,245,255,.12), transparent 65%),
+    #0f1834;
+}
+
+/* Keep whole photo visible (no cropping) */
+.hero-img{
+  width: 100%;
+  height: clamp(320px, 48vw, 520px);
+  object-fit: contain;           /* shows entire image */
+  object-position: center;
+  display: block;
+  background: #0b1020;           /* behind transparent areas / letterboxing */
+}
+
+/* Text overlay in front of the image */
+.hero-overlay{
+  position: absolute;
+  left: clamp(16px, 4vw, 36px);
+  bottom: clamp(16px, 4vw, 36px);
+  max-width: min(760px, 80%);
+  padding: 14px 18px;
+  border-radius: 14px;
+  background: rgba(12, 18, 48, .55); /* subtle panel for readability */
+  border: 1px solid #223068;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  box-shadow: var(--shadow);
+}
+.hero-name{ margin: 0 0 2px 0; font-size: clamp(28px, 5.2vw, 54px); }
+.hero-role{ margin: 0 0 6px 0; font-size: clamp(16px, 2.2vw, 22px); color: var(--muted); }
+.hero-lines{ margin: 0; color: var(--muted); line-height: 1.5; }
+
+/* ===== Stacked cards (one after another) ===== */
+.stack{ display: grid; grid-template-columns: 1fr; gap: 18px; max-width: 1100px; }
+.stack .card{ padding-top: 18px; padding-bottom: 18px; }
