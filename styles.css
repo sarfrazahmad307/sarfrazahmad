@@ -56,3 +56,16 @@ kbd{border:1px solid #2a3a78; border-bottom-width:2px; padding:0 6px; border-rad
 @media (max-width:600px){
   .nav-inner{flex-wrap:wrap}
 }
+
+/* --- Stickers --- */
+.stickers { display:flex; flex-wrap:wrap; gap:10px; }
+.sticker{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:10px 12px; border-radius:14px;
+  background: linear-gradient(135deg, #1a2750, #142044);
+  border:1px solid #2a3a78;
+  box-shadow: var(--shadow);
+  color: var(--text);
+  font-weight: 600;
+  letter-spacing: .1px;
+}
