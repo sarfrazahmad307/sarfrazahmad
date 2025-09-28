@@ -62,43 +62,36 @@ kbd{border:1px solid #2a3a78;border-bottom-width:2px;padding:0 6px;border-radius
   box-shadow:var(--shadow);color:var(--text);font-weight:600;letter-spacing:.1px;
 }
 
-/* ===== HERO (big copy left, SQUARE image right) ===== */
-.hero-band { padding: 8px 0 0; }
-.hero-unit{
-  border:1px solid #223068; border-radius:22px; box-shadow:var(--shadow);
-  background:
-    radial-gradient(1100px 600px at -10% -30%, rgba(122,162,255,.14), transparent 60%),
-    radial-gradient(900px 600px at 120% -40%, rgba(141,245,255,.10), transparent 60%),
-    linear-gradient(180deg, #0f1834 0%, #0e1430 100%);
-  padding: clamp(18px, 3vw, 28px);
-}
+/* ===== HERO (minimal, no box; big copy left, SQUARE image right) ===== */
+.hero-band{ padding:12px 0 0; }
 
-/* two fixed columns on desktop so image NEVER drops below */
+/* remove card look around the hero */
+.hero-unit{ padding:0; border:none; box-shadow:none; background:none; border-radius:0; }
+
+/* two columns on desktop; image width capped, never drops below on wide screens */
 .hero-grid{
-  display:grid; align-items:center; gap: clamp(18px, 3.5vw, 36px);
-  grid-template-columns: 1.25fr min(360px, 30vw);
+  display:grid; align-items:center; gap:24px;
+  grid-template-columns: 1fr min(320px, 28vw);
 }
-@media (max-width: 860px){
-  .hero-grid{ grid-template-columns: 1fr; }
-}
+@media (max-width:860px){ .hero-grid{ grid-template-columns:1fr; } }
 
-.hero-copy{ max-width: 720px; }
-.hero-title{ margin:0 0 6px 0; font-size: clamp(44px, 6.8vw, 76px); line-height: 1.05; }
-.hero-role{ margin:0 0 12px 0; font-size: clamp(20px, 2.6vw, 28px); color: var(--muted); font-weight: 600; }
-.hero-lead{ margin:0; color: var(--muted); font-size: clamp(16px, 1.8vw, 19px); line-height: 1.7; }
+.hero-copy{ max-width:720px; }
+.hero-title{ margin:0 0 6px; font-size:clamp(32px,5vw,52px); line-height:1.1; }
+.hero-role{  margin:0 0 10px; font-size:clamp(18px,2.2vw,22px); color:var(--muted); font-weight:600; }
+.hero-lead{  margin:0; color:var(--muted); font-size:clamp(15px,1.6vw,18px); line-height:1.6; }
 
-.hero-media{ justify-self:center; }
+/* Square image that shows the WHOLE photo (no crop) and no border/shadow */
+.hero-media{ justify-self:end; }
 .hero-square{
-  width: min(360px, 30vw);
-  height: min(360px, 30vw);
-  object-fit: cover;           /* FILL the square */
-  object-position: center;
-  border-radius: 18px;
-  border: 4px solid rgba(255,255,255,.10);
-  box-shadow: 0 18px 50px rgba(0,0,0,.45);
-  display:block;
+  width:min(320px, 28vw);
+  height:min(320px, 28vw);
+  object-fit:contain;            /* show entire image */
+  object-position:center;
+  border:none; box-shadow:none;  /* no bounding box */
+  border-radius:12px;            /* set 0 for sharp square if you prefer */
+  background:#0c1230;            /* behind letterboxing bars */
 }
 
 /* ===== Stacked sections spacing ===== */
-.stack{ display:grid; grid-template-columns:1fr; gap:28px; margin-top:18px; }
-.stack .card{ padding:24px; }
+.stack{ display:grid; grid-template-columns:1fr; gap:22px; margin-top:12px; }
+.stack .card{ padding:22px; }
